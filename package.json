@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuraKolyada/testProject.git"
+  },
+  "author": "YuraKolyada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuraKolyada/testProject/issues"
+  },
+  "homepage": "https://github.com/YuraKolyada/testProject#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp.spritesmith": "^6.5.0"
+  }
+}

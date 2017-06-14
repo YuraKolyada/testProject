@@ -1,0 +1,77 @@
+.practice {
+	text-align: center;
+	&__icon {
+		@include sprite($about);
+		margin-top: 52px;
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 30px;
+		margin: 28px 0 55px 0;
+		color: #1c1c1c;
+	}
+
+	&__check-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__check-item {
+		width: (100%/3);
+		text-align: start;
+		min-width: (768px/3);
+	}
+
+	&__check {
+		margin-bottom: 15px;
+
+		label {
+			color: #000;
+			line-height: 35px;
+			font-size: 1rem;
+			font-weight: 300;
+			display: flex;
+    		align-items: center;
+
+			&:before {
+				display: inline-flex;
+				content: '';
+				width: 20px;
+				height: 20px;
+				border-radius: 3px;
+				border: 1px solid #435993; 
+				margin-right: 12px;
+				cursor: pointer;
+			}
+
+			&:hover:before {
+				background: #e9efff;
+			}
+		}
+
+		input[type=checkbox]:checked + label:before {
+			background: url('../image/check.png') no-repeat 100%;
+			background-color: #435993;
+			background-position: center center; 
+		}
+	}
+
+
+}
+
+@media screen and (max-width: 768px){
+	.practice {
+		&__check-items {
+			justify-content: flex-start;
+			align-items: center;
+		}
+	}	
+
+	.label__start {
+		width: 100%;
+		padding-left: 50px;
+	}
+
+}

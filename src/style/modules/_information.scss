@@ -1,0 +1,107 @@
+.form__title {
+	margin: 130px 0 80px 0;
+	font-size: 70px;
+	font-weight: 100;
+	text-align: center;
+	color: #1c1c1c;
+
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__icon {
+		@include sprite($js);
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 30px;
+		margin: 28px 0 55px 0;
+		color: #1c1c1c;
+	}
+
+	&__floating-label {
+		position: absolute;
+		pointer-events: none;
+		font-weight: 400;
+		font-size: 1.5rem;
+		color: #c8c8c8;
+		left: 50%;
+		transform: translateX(-50%);
+		top: (58px/2) - 12px;
+		transition: 0.2s ease all;
+	}
+
+	&__wrap-input {
+		width: 100%;
+		position: relative;
+		height: 60px;
+		margin-bottom: 25px;
+
+		input {
+			width: 100%;
+			height: 100%;
+			border-radius: 3px;
+			border: 1px solid $color-border;
+		}
+	}
+
+	&__input-personal {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+
+		input {
+			font-weight: 400;
+			font-size: 22px;
+			color: #1c1c1c;
+			text-align: center;
+			padding-top: 16px;
+
+			&:focus {
+				font-size: 22px;
+				color: #1c1c1c;
+				border: 1px solid #1abc9c;
+			}
+		} 
+	}
+}
+
+input:focus ~ .info__floating-label,
+input:not(:focus):valid ~ .info__floating-label {
+  top: 7px;
+  font-size: 14px;
+  color: #adadad;
+
+}
+
+.form__btn {
+	width: 115px; 
+	height: 50px;
+	border-radius: 10px;
+	background: #435993;
+	margin-bottom: 75px;
+	font-size: 1rem;
+	font-weight: 300;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&-wrap {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.form__title {
+		margin-top: 50px;
+	}
+}

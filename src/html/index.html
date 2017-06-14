@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test</title>
+	<link rel="stylesheet" type="text/css" href="../style/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="app">
+		<div class="header__wrap">
+			<div class="header__container">
+				<div class="header">
+					<div class="header__menu active" id="menu"></div>
+					<ul class="header__navigation navigation" >
+						<li class="navigation__item"><a href="#" class="navigation__link active">Личная информация</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Опыт</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">JavaScript</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">О себe</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<form class="form">
+				<div class="wrap">
+					<h1 class="form__title">Анкета</h1>
+					<div class="form__info info">
+						<i class="info__icon icon"></i>
+						<h2 class="info__title">Личная информация</h2>
+						<div action="#" class="info__input-personal">
+							<div class="info__wrap-input">
+								<input type="text" name="surname" class="info__surname" value="Коляда Юрий Петрович" required>
+								<span class="info__floating-label">ФИО</span>
+							</div>
+							<div class="info__dropdown dropdown">		
+								<div class="dropdown__select">
+									<div class="dropdown__option-selected" data-value="1997" tabindex="1">Год рождения</div>
+									<div class="dropdown__options-wrap  ">
+										<div class="dropdown__option" data-value="1997">2001</div>
+										<div class="dropdown__option" data-value="1998">2002</div>
+										<div class="dropdown__option" data-value="1999">2003</div>
+										<div class="dropdown__option" data-value="2000">2004</div>
+										<div class="dropdown__option" data-value="2001">2005</div>
+										<div class="dropdown__option" data-value="2002">2006</div>
+										<div class="dropdown__option" data-value="2002">2007</div>
+										<div class="dropdown__option" data-value="2002">2008</div>
+									</div>
+								</div>
+							</div>
+							<div class="info__wrap-input">
+								<input type="text" name="city" class="info__city" value="Киев" required>
+								<span class="info__floating-label label__start">Место проживания</span>
+							</div>
+							<div class="info__wrap-input">
+								<input type="text" name="skype" class="info__skype" value="yoora1234" required>
+								<span class="info__floating-label">Skype</span>
+							</div>
+							<div class="info__wrap-input">
+								<input type="email" name="email" class="info__mail" value="yyoorraa@gmail.com" required>
+								<span class="info__floating-label">E-mail</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__practice practice">
+					<i class="practice__icon icon"></i>
+					<h2 class="practice__title">Расскажите о своем опыте</h2>
+					<div class="practice__check-items">
+						<div class="practice__check-item">
+							<div class="practice__check"><input type="checkbox" id="check1" checked><label for="check1">БЭМ/OOCSS</label></div>
+							<div class="practice__check"><input type="checkbox" id="check2" checked><label for="check2">Stylus/LESS/SASS</label></div>
+							<div class="practice__check"><input type="checkbox" id="check3" checked><label for="check3">Работаю с SVG</label></div>
+						</div>
+						<div class="practice__check-item">
+							<div class="practice__check"><input type="checkbox" id="check4" checked><label for="check4">Верстаю семантично</label></div>
+							<div class="practice__check"><input type="checkbox" id="check5" checked><label for="check5">ES2015/ES2016</label></div>
+							<div class="practice__check"><input type="checkbox" id="check6" checked><label for="check6">Gulp/GRUNT</label></div>
+						</div>
+						<div class="practice__check-item">
+							<div class="practice__check"><input type="checkbox" id="check7" checked><label for="check7">Webpack</label></div>
+							<div class="practice__check"><input type="checkbox" id="check8" checked><label for="check8">jQuery</label></div>
+							<div class="practice__check"><input type="checkbox" id="check9" checked><label for="check9">Ипользую Git</label></div>
+						</div>
+					</div>
+				</div>
+				<div class="form_lang lang">
+					<div class="lang__wrap">
+						<i class="lang__icon icon"></i>
+						<h2 class="lang__title">Уровень владения JavaScript</h2>
+						<div class="lang__svg">
+							<div class="lang__svg-metka">
+								<span class="lang__svg-title">Не владею</span>
+								<span class="lang__svg-title">Использую готовые решения</span>
+								<span class="lang__svg-title">Использую готовые решения и умею и переделывать</span>
+								<span class="lang__svg-title">Пишу сложный JS с нуля</span>
+							</div>
+							<svg width="768" height="14">
+								<polygon points="0,7 768,14 768,0" fill="rgba(255,255,255,0)" stroke-width="1" stroke="rgb(0,0,0)"/>
+								<linearGradient id="grad1">
+						            <stop offset="0%" stop-color="#1abc9c"/>
+						            <stop offset="100%" stop-color="#ccb1f1"/>
+						        </linearGradient>
+								<polygon id="fill" points="0,7  768,20.439999999999998 768,-6.4399999999999995" fill="url(#grad1)" stroke-width="0" stroke="rgb(0,0,0)"/>
+							</svg>
+							<input id="slide" type="range" min="0" max="768" step="192" value="768">
+							<div class="lang__svg-line lang__svg-line--4"></div>
+							<div class="lang__svg-line lang__svg-line--3"></div>
+							<div class="lang__svg-line lang__svg-line--2"></div>
+							<div class="lang__svg-line lang__svg-line--1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="form_about about">
+						<i class="about__icon icon"></i>
+						<h2 class="about__title">Расскажите о себе</h2>
+						<p class="about__text">Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
+						<textarea name="about" placeholder="Понравилась тем, что..." class="about__input" value="" resize>Буду говорить прямо - очень хорошая начальная зарплата. Во-вторых очень нравится стратегия данной компании и сотрудничество с очень перспективными клиентами. В-третьих, как для меня, это шаг вперед в карьере, и основною целью есть достежения своей цели, стать очень харошым специалистом(специалистов много, но очень харошых мало) в данной сфере(JS разработчик)</textarea>
+					</div>
+				</div>
+				<div class="form__btn-wrap">
+					<button class="form__btn">Готово</button>
+				</div>
+			</form>
+		</div>
+		<div class="mobile" id='nav'>
+			<div class="mobile__close active" id="close"></div>
+			<ul class="mobile__navigation navigation" id="nav">
+				<li class="navigation__item"><a href="#" class="navigation__link active">Личная информация</a></li>
+				<li class="navigation__item"><a href="#" class="navigation__link">Опыт</a></li>
+				<li class="navigation__item"><a href="#" class="navigation__link">JavaScript</a></li>
+				<li class="navigation__item"><a href="#" class="navigation__link">О себe</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>

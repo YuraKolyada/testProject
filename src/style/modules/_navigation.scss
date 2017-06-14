@@ -1,0 +1,104 @@
+.navigation {
+	display: flex;
+	justify-content: space-between;
+
+	&__link {
+		font-size: 14px;
+		font-weight: 300;
+		color: #435993;
+
+		&.active {
+			color: #1c1c1c;
+		}
+
+		&:hover {
+			color: #1c1c1c;
+		}
+
+		&:active {
+			color: #1c1c1c;
+		}
+	}
+}
+
+.header__menu {
+	background: url('http://savepic.ru/14387315.png') no-repeat 100%;
+	display: none;
+    width: 40px;
+    height: 40px;
+}
+
+
+.mobile {
+	display: none;
+}
+
+@media screen and (max-width: 768px){
+	.header__menu.active {
+		display: block;
+		cursor: pointer;
+	}
+	.header__wrap {
+		border: none;
+	}
+
+	.header {
+		width: 90%;
+		min-width: 320px;
+		justify-content: flex-end;
+		&__navigation {
+			display: none;
+		}
+	}
+	
+	.dropdown {
+		width: 100%;
+	}
+
+	.mobile {
+		width: 90%;
+		min-width: 320px;
+		justify-content: center;
+		display: none;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+		background: #fff;
+		padding-top: 50px;
+		&.active-menu {
+			display: flex;
+		}
+
+		&__close {
+			background: url('http://savepic.ru/14398577.png') no-repeat 100%;
+			display: block;
+			position: absolute;
+		    width: 32px;
+		    top: 20px;
+		    right: 20px;
+		    height: 32px;
+		    cursor: pointer;	
+		}
+
+		&__navigation {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+	}
+	.navigation {
+		&__link {
+			font-size: 20px;
+			font-weight: 300;
+			color: #435993;
+			
+		}
+
+		&__item {
+			padding: 10px 0;
+		}
+	}
+}

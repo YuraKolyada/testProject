@@ -1,0 +1,139 @@
+.lang {
+	text-align: center;
+	&__icon {
+		@include sprite($js-in);
+		margin-top: 134px;
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 30px;
+		margin: 28px 0 45px 0;
+		color: #1c1c1c;
+	}
+
+	&__svg-metka {
+		display:flex;
+		justify-content: space-between; 
+		text-align: start;
+		position: relative
+	}
+
+	&__svg-title {
+		width: 25%;
+		position: absolute;
+		font-weight: 300;
+		line-height: 19px;
+		font-size: 13px;
+		color: #2e211c;
+		&:last-child {
+			text-align: end;
+			top: -38px;
+    		left: 75%;
+		}
+
+		&:first-child {
+			top: -38px;
+    		left: 0%;
+		}
+
+		&:nth-child(2){
+			top: -57px;
+    		left: 25%;
+    		width: 22%;
+		}
+
+		&:nth-child(3){
+			top: -57px;
+    		left: 50%;
+		}
+	}
+
+	&__svg {
+		min-width: 768px;
+		margin: 102px 0 78px;
+		position: relative;
+		//overflow-y: auto;
+		&-line {
+			background: url(http://savepic.ru/14405123.png) no-repeat 100%;
+		    display: block;
+		    position: absolute;
+		    width: 2px;
+		    height: 16px;
+		    background-position: left center;
+
+		    &--1 {
+		    	top: -19px;
+		    	right: 0px;
+		    }
+
+		     &--2 {
+		    	top: -18px;
+    			right: 384px;
+		    }
+
+		     &--3 {
+		    	top: -15px;
+    			right: 766px;
+		    }
+
+		     &--4 {
+		    	top: -15px;
+    			right: 575px;
+		    }
+		}
+
+	}
+
+	&__wrap {
+		width: 100%;
+	}
+
+	/* Специальные правила для браузеров на движках WebKit/Blink */
+	input[type=range]::-webkit-slider-thumb {
+	  @include sprite($metka);
+	  cursor: pointer;
+	  margin-top: -5px;
+	}
+
+	/* Тоже самое для Firefox */
+	input[type=range]::-moz-range-thumb {
+	  @include sprite($metka);
+	  cursor: pointer;
+	  margin-top: -5px;
+	}
+
+	/* Тоже самое для IE */
+	input[type=range]::-ms-thumb {
+	  @include sprite($metka);
+	  cursor: pointer;
+	  margin-top: -5px;
+	}
+
+	input[type=range] {
+	  -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+	  width: 100%; /* Указание параметра ширины требуется для Firefox. */
+	}
+
+	input[type=range]::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	}
+
+	input[type=range]:focus {
+	  outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+	}
+
+	input[type=range]::-ms-track {
+	  width: 100%;
+	  cursor: pointer;
+	  background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+	  border-color: transparent;
+	  color: transparent;
+	}
+}
+
+@media screnn and (max-width:768px) {
+	.lang__wrap {
+		overflow-y: auto;
+	}
+}
